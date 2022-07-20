@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>RSWM VEHICLE MANAGEMENT SYSTEM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" type="image/x-icon" href="resources/img/banner/rswm-logo.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body onload="hide()">
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="post" action="local_vehicle">
+			<input type="hidden" value="<%=current %>" name="current">
+				<span class="contact100-form-title">
+					Request For Vehicle
+				</span>
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Request_no</span>
+					<input class="input100" type="text" id="input" name="app_no" value='<%=app_no %>' readonly="readonly">
+				</div>
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your emp_code">
+					<span class="label-input100">Emp Code</span>
+					<input class="input100" type="text" name="emp_code" placeholder="Enter Your emp_code " value="<%= (String)session.getAttribute("emp_code") %>" readonly required>
+				</div>
+				
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Destination</span>
+					<input class="input100" type="text" name="dest" placeholder="Enter Destination" required>
+				</div>
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">No of passenger</span>
+					<input class="input100" type="number" name="no_passenger" placeholder="Enter no of passenger" min="1" required>
+				</div>
+				
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Start Date</span>
+					<input class="input100" type="date" id="st_date" name="st_date" placeholder="Enter start date" required>
+				</div>
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Return date</span>
+					<input class="input100" type="date" id="end_date" name="end_date" placeholder="Enter end date" required>
+				</div>
+				<div class="wrap-input100 validate-input bg1">
+					<span class="label-input100">start time</span>
+					<input class="input100" type="time" id="st_time" name="st_time" placeholder="Enter start time" required>
+				</div>
+
+				
+				<div class="wrap-input100 validate-input bg0">
+					<span class="label-input100">Address for communication</span>
+					<input class="input100" type="text" name="address" placeholder="Enter address for communication">
+				</div>
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+					<span class="label-input100">Remarks</span>
+					<textarea class="input100" name="remark" placeholder="Your remarks here..."></textarea>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" type="submit">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>

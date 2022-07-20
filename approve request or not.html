@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>RSWM VEHICLE MANAGEMENT SYSTEM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/banner/rswm-logo.svg">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="resources/css/magnific-popup.css">
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/css/themify-icons.css">
+    <link rel="stylesheet" href="resources/css/nice-select.css">
+    <link rel="stylesheet" href="resources/css/flaticon.css">
+    <link rel="stylesheet" href="resources/css/animate.css">
+    <link rel="stylesheet" href="resources/css/slicknav.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<style>
+body{
+overflow: auto; 
+}
+.g{
+margin :20px;
+}
+</style>
+</head>
+<body>
+ 
+    <br>
+<br>
+
+
+
+
+<br><br><br><br><br><br><br>
+<div class="g">
+		<form class="ui form" method="post" action="approve">
+
+<table class="ui celled table">
+<thead>
+<tr>
+<th>
+APPLICATION NO
+</th>
+<th>
+NAME
+</th>
+<th>
+EMPLOYEE CODE
+</th>
+<th>
+PURPOSE
+</th>
+<th>
+DESTINATION
+</th>
+<th>
+NO OF PASSENGERS
+</th>
+<th>
+ADDRESS
+</th>
+<th>
+START DATE
+</th>
+<th>
+END DATE
+</th>
+<th>
+START TIME
+</th>
+<th>
+REMARKS
+</th>
+<th>
+APPROVE
+</th>
+<th>
+REJECT
+</th>
+</tr>
+</thead>
+
+		<tr>
+		<td>
+	<%=results.getInt("app_no")%>	
+	</td>
+<td>
+	<%=results.getString("name")%>
+	</td>
+	<td>
+	<%=results.getString("emp_code")%>
+	</td>
+	<td>
+	<%=results.getString("purpose")%>
+	</td>
+	<td>
+	<%=results.getString("destination")%>
+	</td>
+	<td>
+	<%=results.getInt("passenger")%>
+	</td>
+	<td>
+	<%=results.getString("address")%>
+	</td>
+	<td>
+	<%=results.getString("start_date")%>
+	</td>
+	<td>
+	<%=results.getString("end_date")%>
+	</td>
+	<td>
+	<%=results.getString("start_time")%>
+	</td>	
+		<td>
+	<%=results.getString("remarks")%>
+	<td>
+	<input type="checkbox" value="<%=results.getString("app_no")%>" id="g" onclick="add1(<%=results.getString("app_no") %>);">
+	</td>
+	<td>
+	<input type="checkbox" value="<%=results.getString("app_no")%>" id="g" onclick="add2(<%=results.getString("app_no") %>);">
+	</td>
+	</tr>
+	<%}
+%>
+</table>
+
+<input type="hidden" name="arr1" id="arr1">
+<input type="hidden" name="arr2" id="arr2">
+<button class="ui button" type="submit">SUBMIT</button>
+</form>
+</div>
+
+<br><br>
+
+
+    </body>
+    </html>
